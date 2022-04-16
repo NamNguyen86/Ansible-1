@@ -1,5 +1,4 @@
 ---
-- name: Set IP
   hosts: host_Phuongnt28_R1
   gather_facts: no
 
@@ -38,7 +37,6 @@
 
     - debug: var=show_ip.stdout_lines
     
-    - name: Set IP
     
   hosts: host_Phuongnt28_R2
   gather_facts: no
