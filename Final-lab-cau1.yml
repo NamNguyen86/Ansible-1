@@ -1,6 +1,6 @@
 ---
 - name: Set IP
-  hosts: R1
+  hosts: host_Phuongnt28_R1
   gather_facts: no
 
   tasks:
@@ -40,7 +40,7 @@
     
     - name: Set IP
     
-  hosts: R2
+  hosts: host_Phuongnt28_R2
   gather_facts: no
 
   tasks:
