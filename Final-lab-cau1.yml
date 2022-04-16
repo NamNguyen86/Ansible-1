@@ -34,6 +34,12 @@
         commands:
           - show ip int brief
       register: show_ip
+      
+    - name: configure static route to R2
+    ios_static_route:
+      prefix: 192.168.2.0
+      mask: 255.255.255.0
+      next_hop: 192.168.12.2
 
     - debug: var=show_ip.stdout_lines
     
@@ -73,5 +79,11 @@
         commands:
           - show ip int brief
       register: show_ip
+      
+    - name: configure static route to R1
+      ios_static_route:
+        prefix: 192.168.1.0
+        mask: 255.255.255.0
+        next_hop: 192.168.12.1
 
     - debug: var=show_ip.stdout_lines
